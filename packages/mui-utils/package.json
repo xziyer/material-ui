@@ -1,0 +1,69 @@
+{
+  "name": "@mui/utils",
+  "version": "10.0.0-alpha.0",
+  "author": "MUI Team",
+  "description": "Utility functions for React components.",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "mui",
+    "utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mui/material-ui.git",
+    "directory": "packages/mui-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/mui/material-ui/issues"
+  },
+  "homepage": "https://github.com/mui/material-ui/tree/master/packages/mui-utils",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/mui-org"
+  },
+  "scripts": {
+    "build": "code-infra build --tsgo --flat",
+    "release": "pnpm build && pnpm publish",
+    "test": "pnpm --workspace-root test:unit --project \"*:@mui/utils\"",
+    "typescript": "tsc -p tsconfig.json",
+    "attw": "attw --pack ./build --entrypoints \".\" \"deepmerge\" \"useId\" \"composeClasses\""
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.29.7 || ^8.0.5",
+    "@mui/types": "workspace:^",
+    "@types/prop-types": "^15.7.15",
+    "clsx": "^2.1.1",
+    "prop-types": "^15.8.1",
+    "react-is": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/react-is": "19.3.0",
+    "@types/sinon": "22.0.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sinon": "22.1.0"
+  },
+  "peerDependencies": {
+    "@types/react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "directory": "build"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*/index.ts"
+  }
+}

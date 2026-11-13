@@ -1,32 +1,23 @@
-# [Material-UI](http://callemall.github.io/material-ui/)
+# Docs
 
-This is the documentation site for [Material-UI](http://callemall.github.io/material-ui/).
+This is the website of the company MUI and the documentation for Material UI.
 
-## Installation
-After cloning the repository, install dependencies:
-```
-cd <project folder>/material-ui
-npm install
-cd <project folder>/material-ui/docs
-npm install
+To start the docs site in development mode, from the project root, run:
+
+```bash
+pnpm docs:dev
 ```
 
-Now you can run your local server:
-```
-npm start
-```
-Open http://localhost:3000 to view the documentation site.
-#Description of [Webpack](http://webpack.github.io/docs/)
-Webpack is a module bundler that we are using to run our documentation site. This is a quick overview of how the configuration file works.
-##Webpack Configuration:
-###Entry:
-Webpack creates entry points for the application to know where it starts.
-###Resolve:
-Webpack uses this configuration options to determine how it will deal with requiring files. For example, when the extension is omitted in a require, Webpack will look at the extensions option and try applying one of those.
-###Output:
-This is where the bundled project will go to and any other files necessary for it to run.
-###Plugins:
-These are plugins Webpack uses for more functionality. The HTML Webpack Plugin, for example, will add the index.html to your build folder.
-###Modules:
-Modules and other things that are required will usually need to be loaded and interpreted by Webpack when bundling, and this is where Webpack looks for the different loaders.
-*Loading .js files in es6 and es7 will require a loader like babel-loader to interpret the files into es5.
+If you do not have pnpm installed, select your OS and follow the instructions on the [pnpm website](https://pnpm.io/installation).
+
+Package managers other than pnpm (like npm or Yarn) are not supported and will not work.
+
+## How can I add a new demo to the documentation?
+
+[You can follow this guide](../CONTRIBUTING.md)
+on how to get started contributing to MUI.
+
+## How do I help to improve the translations?
+
+Please visit https://crowdin.com/project/material-ui-docs where you will be able to select a language and edit the translations.
+Please don't submit pull requests directly.
